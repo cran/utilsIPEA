@@ -1,0 +1,17 @@
+bc2319e894fd7d147541db7f427f1568 *DESCRIPTION
+523b505887b965e8a64957a4e550ca92 *NAMESPACE
+e05690e9a76019789e08173976a635e0 *R/data.R
+4536ec3c017cf714bd7e2b5da938fa0d *R/extrai_nome_proprio.R
+d0808e76f90529d9a36219c9d0846a0d *R/nome_de_solteira.R
+b3b581f5edfc4ae1d5344db77fbf1dc8 *R/text_functions.R
+840c72497ad9bd1824f15cd78da9096d *README.md
+5002ec9e47618631f796b04088e235a9 *data/base_nomes.rda
+45590a7f316fa50aa705933b4cae366e *data/datalist
+30d4a5832da19a4c4cef589648bfbae0 *man/base_nomes.Rd
+2636f410d9a5355d9aacc548008233c0 *man/extrai_NomeProprio.Rd
+f8b79a9819638d48a343121f29292af2 *man/nome_de_solteira.Rd
+21a3afde41d37807cf27c760f61f4fa7 *man/remove_preposicao_nomes.Rd
+341835dab12389eef50be9bb4470c3df *tests/testthat.R
+1bc120d5baf299b4ff15efa39f94b3d0 *tests/testthat/test_extrai_nome_proprio.R
+61951ed99130a391e14a283cc0120c2f *tests/testthat/test_nome_de_solteira.R
+1e0df3c0bea59c6dc28ae95d4b15ab19 *tests/testthat/test_text_functions.R
