@@ -33,3 +33,55 @@ remove_preposicao_nomes <- function(base, ...){
   return(base)
 
 }
+
+
+#' Abrevia o nome do meio.
+#'
+#' \code{abrevia_nome_meio} return names .
+#'
+#'
+#' @param base A data table, data frame or character vector.
+#' @param ... columns for apply the function
+#'
+#' @import data.table
+#' @importFrom stringr str_replace_all
+#' @importFrom stringr str_extract
+#' @return the base param with a new column.
+#'
+#' @examples
+#'    base <- data.frame(nome = c("João Pereira Neves", "Pedro Aparecido Anjos", "Maria Joaquina Gracas"))
+#'    base <- remove_preposicao_nomes(base, "nome")
+#' @export
+#'
+abrevia_nome_meio <- function(base, ...){
+  if(is.character(base)){
+    return(abrevia_nomes_meio_coluna(base))
+  }
+  other_columns <- unlist(eval(substitute(alist(...))))
+  stopifnot(length(other_columns) > 0)
+  if(!is.data.table(base)){ setDT(base) }
+  new_columns <- sapply(other_columns, function(x) paste0(x, "_abrev"))
+  mapply( function(x, y){ set(base, j = x, value = abrevia_nomes_meio_coluna(base[[y]])) },
+          new_columns, other_columns)
+
+  return(base)
+
+}
+
+abrevia_nomes_meio_coluna<- function(nomes){
+  novos_nomes <- sapply(nomes, USE.NAMES = F, function(nome){
+    first<- str_extract(nome, "^[A-Z-a-z]+(?=\\s)")
+    last<- str_extract(nome, "[A-Z-a-z]+$")
+    mid <- str_trim(str_replace_all(nome, "^[A-Z-a-z]+|[A-Z-a-z]+$",""))
+    mid<- ifelse(is.na(mid),"",mid) %>%
+      str_trim() %>%
+      str_extract_all("^[A-Z-a-z]|\\s[A-Z-a-z]", simplify = T) %>%
+      str_trim() %>%
+      paste(collapse = " ")
+    nome_corrigido<- paste(first,mid,last, sep = " ") %>% str_replace_all("\\s+"," ")
+    return(nome_corrigido)
+  } )
+  return(novos_nomes)
+}
+
+
