@@ -1,6 +1,6 @@
 #' Check Brazilian names
 #'
-#' \code{extrai_NomeProprio} Parse brazlian names and returns given names, surnames and gender
+#' \code{extrai_NomeProprio} Parse Brazilian names and returns given names, surnames and gender
 #'
 #' @param x List, character or factor with names to be parsed.
 #' @param sobrenome If TRUE, the list of surnames is returned.

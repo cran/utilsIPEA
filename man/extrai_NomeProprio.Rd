@@ -17,7 +17,7 @@ extrai_NomeProprio(x, sobrenome = FALSE, sexo = FALSE)
 Returns a data.table
 }
 \description{
-\code{extrai_NomeProprio} Parse brazlian names and returns given names, surnames and gender
+\code{extrai_NomeProprio} Parse Brazilian names and returns given names, surnames and gender
 }
 \examples{
   extrai_NomeProprio(x = c("Maria Conceicao da Costa", "Mario Silva"), sobrenome = TRUE)

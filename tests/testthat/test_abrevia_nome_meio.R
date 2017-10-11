@@ -8,8 +8,8 @@ test_that("abrevia nome do meio nomes", {
 })
 
 test_that("abrevia nome do meio  de um vetor de caracteres", {
-  nomes <- c("Joao Pereira Neves", "Pedro Aparecido Anjos", "Maria Joaquina Gracas")
-  nomes_abreviados <- c("Joao P Neves", "Pedro A Anjos", "Maria J Gracas")
+  nomes <- c("Joao Pereira Neves", "Pedro Aparecido Anjos", "Maria Joaquina Gracas", "Pedro Silva", "")
+  nomes_abreviados <- c("Joao P Neves", "Pedro A Anjos", "Maria J Gracas", "Pedro Silva", "")
   retorno <- abrevia_nome_meio(base = nomes)
   expect_equal(nomes_abreviados, retorno)
 })

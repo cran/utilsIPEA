@@ -13,6 +13,6 @@
 base_nomes
 }
 \description{
-A base with most comuns brazilian names and the gender of the name.
+A base with most common Brazilian names and the gender of the name.
 }
 \keyword{datasets}

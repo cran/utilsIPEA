@@ -3,16 +3,10 @@ This package has the most common functions used at IPEA.
 
 ## Installation
 
-The package is not yet on CRAN, so to install it is needed to use devtools. Devtools can be installed as a normal R package:
+The package is on CRAN, so to install it just the command:
 
 ```{r eval=FALSE}
-install.packages("devtools") 
-````
-
-After that, it is possible install validaRA from the github repository using devtools:
-
-```{r eval=FALSE}
-devtools::install_github("ipea/utilsIPEA") 
+install.packages("utilsIPEA") 
 ````
 
 ## Contributing 
