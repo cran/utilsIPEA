@@ -28,7 +28,7 @@ remove_preposicao_nomes <- function(base, ...){
   if(!is.data.table(base)){ setDT(base) }
   new_columns <- sapply(other_columns, function(x) paste0(x,"_semD"))
   mapply( function(x, y){ set(base, j = x, value = str_replace_all(base[[y]], subs, " ")) },
-        new_columns, other_columns)
+          new_columns, other_columns)
 
   return(base)
 
@@ -79,6 +79,7 @@ funcao_generica <- function(base, ..., suffixo, FUN){
 #'
 #' @import data.table
 #' @importFrom stringr str_replace_all
+#' @importFrom stringr str_extract_all
 #' @importFrom stringr str_extract
 #' @return the base parameter with a new column.
 #'

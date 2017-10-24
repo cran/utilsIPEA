@@ -4,21 +4,23 @@
 \alias{extrai_NomeProprio}
 \title{Check Brazilian names}
 \usage{
-extrai_NomeProprio(x, sobrenome = FALSE, sexo = FALSE)
+extrai_NomeProprio(x, surname = FALSE, gender = FALSE, stringdist = TRUE,
+  spaces = TRUE)
 }
 \arguments{
 \item{x}{List, character or factor with names to be parsed.}
 
-\item{sobrenome}{If TRUE, the list of surnames is returned.}
+\item{surname}{If TRUE, the list of surnames is returned.}
 
-\item{sexo}{If TRUE, the list of gender based on the names is returned.}
+\item{gender}{If TRUE, the list of gender based on the names is returned.}
+
+\item{stringdist}{if TRUE, make a prediction based on the string distance of Jaro-Winkler between the source data and the input.}
+
+\item{spaces}{if TRUE, returns the names without spaces. If FALSE, it compress all the blank spaces.}
 }
 \value{
 Returns a data.table
 }
 \description{
 \code{extrai_NomeProprio} Parse Brazilian names and returns given names, surnames and gender
-}
-\examples{
-  extrai_NomeProprio(x = c("Maria Conceicao da Costa", "Mario Silva"), sobrenome = TRUE)
 }
