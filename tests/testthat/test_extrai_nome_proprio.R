@@ -8,7 +8,7 @@ test_that("nomes proprios", {
 
 test_that("nomes proprios com sexo e sobrenome", {
   nomes <- c("Edileusamaria Ferreira", "Carlos das Neves", "Pedro dos Anjos", "Ana Santos", "Maria Eduarda Almeida")
-  nomes_proprios <- data.frame(NomeProprio = c("EDILEUSA MARIA","CARLOS","PEDRO","ANA","MARIA EDUARDA"), surname = c("FERREIRA", "DAS NEVES", "DOS ANJOS", "SANTOS", "ALMEIDA"), gender = c(1,2,2,1,1), stringsAsFactors = FALSE)
+  nomes_proprios <- data.frame(NomeProprio = c("EDILEUSA MARIA","CARLOS","PEDRO","ANA","MARIA EDUARDA"), surname = c("FERREIRA", "DAS NEVES", "DOS ANJOS", "SANTOS", "ALMEIDA"), gender = c(2,1,1,2,2), stringsAsFactors = FALSE)
   nomes_retorno <- extrai_NomeProprio(nomes,gender = TRUE, surname = TRUE)
   expect_equal(c("NomeProprio","surname","gender"), names(nomes_retorno))
   expect_equal(nomes_proprios, nomes_retorno)

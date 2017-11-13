@@ -21,15 +21,15 @@
 #'
 #' @export
 extrai_NomeProprio <- function(x, surname = FALSE, gender = FALSE, stringdist = TRUE, spaces = TRUE){
-  if(file.exists("data/names_gender.csv")){
-    return((extrai_NomeProprio_(x = x, surname = surname, gender = gender, stringdist = stringdist, spaces = spaces)))
+  dir_base <- file.path(str_replace_all(find.package("utilsIPEA"),"\\\\","/"),"data")
+  if(file.exists(file.path(dir_base,"name_gender.csv"))){
+    return(extrai_NomeProprio_(x = x, surname = surname, gender = gender, stringdist = stringdist, spaces = spaces, dir_base = dir_base))
   } else {
     print("Downloading source data...")
-    #require(RCurl)
     url_base <- getURL("https://raw.githubusercontent.com/ipea/utilsIPEA/base_nomes/nomes.csv")
-    dir.create(paste0(getwd(),"/data"))
-    write.table(url_base,"data/names_gender.csv", sep = ",", quote = FALSE)
-    return(extrai_NomeProprio_(x = x, surname = surname, gender = gender, stringdist = stringdist, spaces = spaces))
+    dir.create(dir_base)
+    write.table(url_base,file.path(dir_base,"name_gender.csv"), sep = ",", quote = FALSE)
+    return(extrai_NomeProprio_(x = x, surname = surname, gender = gender, stringdist = stringdist, spaces = spaces, dir_base = dir_base))
   }
 }
 
@@ -48,7 +48,7 @@ find_strdist <- function(um_primeiro,dois_primeiros,tres_primeiros,base_nomes){
 }
 
 
-extrai_NomeProprio_ <- function(x, surname, gender, stringdist, spaces){
+extrai_NomeProprio_ <- function(x, surname, gender, stringdist, spaces, dir_base){
   NomeProprio <- NULL
   um_primeiro <- NULL
   dois_primeiros <- NULL
@@ -58,7 +58,8 @@ extrai_NomeProprio_ <- function(x, surname, gender, stringdist, spaces){
   base_nomes <- NULL
   V2 <- NULL
   #Carrega bases necessárias e variáveis--------------------------
-  base_nomes <- suppressMessages(fread("data/names_gender.csv"))
+  #base_nomes <- suppressMessages(fread("data/names_gender.csv"))
+  base_nomes <- suppressMessages(fread(file.path(dir_base,"name_gender.csv")))
   patternOneName <- "^[a-zA-Z0-9_]+"
   patternTwoNames <- "^[a-zA-Z0-9_]+\\s[a-zA-Z0-9_]+"
   patternThreeNames <- "^[a-zA-Z0-9_]+\\s[a-zA-Z0-9_]+\\s[a-zA-Z0-9_]+"

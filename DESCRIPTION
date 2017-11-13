@@ -1,12 +1,13 @@
 Package: utilsIPEA
 Type: Package
 Title: IPEA Common Functions
-Version: 0.0.4
+Version: 0.0.5
 Authors@R: c(
     person("Gustavo","Coelho", role=c("aut","cre"), email="gustavo.coelho@ipea.gov.br"),
     person("Lucas","Mation", role=c("aut"), email="lucas.mation@ipea.gov.br"),
     person("Daniel","Lima", role=c("ctb"), email="daniel.viegas@ipea.gov.br"),
-    person("Igor","Noberto", role=c("ctb"), email="igor.noberto@ipea.gov.br")
+    person("Igor","Noberto", role=c("ctb"), email="igor.noberto@ipea.gov.br"),
+    person("João Victor","Machado", role=c("ctb"), email="joao.machado@ipea.gov.br")
     )
 Maintainer: Gustavo Coelho <gustavo.coelho@ipea.gov.br>
 Description: The most used functions on IPEA (Instituto de Pesquisa Economica Aplicada). 
@@ -19,13 +20,14 @@ RoxygenNote: 6.0.1
 URL: https://github.com/ipea/utilsIPEA
 BugReports: http://github.com/ipea/utilsIPEA/issues
 Depends: R (>= 3.0)
-Imports: data.table, stringr, utils, stringdist, RCurl
+Imports: data.table, stringr, utils, stringdist, RCurl, dplyr
 Suggests: testthat, covr
-NeedsCompilation: yes
-Packaged: 2017-10-24 20:24:46 UTC; B15599226
+NeedsCompilation: no
+Packaged: 2017-11-13 18:54:09 UTC; B15599226
 Author: Gustavo Coelho [aut, cre],
   Lucas Mation [aut],
   Daniel Lima [ctb],
-  Igor Noberto [ctb]
+  Igor Noberto [ctb],
+  João Victor Machado [ctb]
 Repository: CRAN
-Date/Publication: 2017-10-24 20:38:32 UTC
+Date/Publication: 2017-11-13 19:00:46 UTC

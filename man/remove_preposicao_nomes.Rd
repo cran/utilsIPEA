@@ -4,12 +4,14 @@
 \alias{remove_preposicao_nomes}
 \title{Remove de da e dos of names .}
 \usage{
-remove_preposicao_nomes(base, ...)
+remove_preposicao_nomes(base, ..., suffixo = "_semD")
 }
 \arguments{
 \item{base}{A data table, data frame or character vector.}
 
 \item{...}{columns for apply the function}
+
+\item{suffixo}{Suffix name for the new column.}
 }
 \value{
 the base parameter with a new column.
