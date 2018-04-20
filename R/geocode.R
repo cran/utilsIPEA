@@ -6,7 +6,7 @@
 #' @importFrom dplyr %>%
 #' @param base Data frame, data set with return from GALILEO
 #' @param mun character, the name of the municipio.
-#' @param match character, the colum MatchAdress from GALILEO.
+#' @param match character, the column MatchAdress from GALILEO.
 #' @param uf character, the name of the state.
 #'
 #' @return Returns a new column called munmatch with true or false.

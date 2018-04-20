@@ -11,7 +11,7 @@ ident_erros_munic_galileo(base, mun, match, uf)
 
 \item{mun}{character, the name of the municipio.}
 
-\item{match}{character, the colum MatchAdress from GALILEO.}
+\item{match}{character, the column MatchAdress from GALILEO.}
 
 \item{uf}{character, the name of the state.}
 }

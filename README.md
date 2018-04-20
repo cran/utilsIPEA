@@ -1,5 +1,4 @@
-# utilsIPEA  [![Build Status](https://travis-ci.org/ipea/utilsIPEA.svg?branch=master)](https://travis-ci.org/ipea/utilsIPEA) [![Cran](https://www.r-pkg.org/badges/version/utilsIPEA)](https://www.r-pkg.org/badges/version/utilsIPEA) [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/utilsIPEA)](https://cranlogs.r-pkg.org/badges/grand-total/utilsIPEA) [![Coverage](https://img.shields.io/codecov/c/github/ipea/utilsIPEA/master.svg)](https://img.shields.io/codecov/c/github/ipea/utilsIPEA/master.svg)
-
+# utilsIPEA  [![Build Status](https://travis-ci.org/ipea/utilsIPEA.svg?branch=master)](https://travis-ci.org/ipea/utilsIPEA) [![Cran](https://www.r-pkg.org/badges/version/utilsIPEA)](https://www.r-pkg.org/badges/version/utilsIPEA) [![Downloads](https://cranlogs.r-pkg.org/badges/grand-total/utilsIPEA)](https://cranlogs.r-pkg.org/badges/grand-total/utilsIPEA) [![Coverage](https://img.shields.io/codecov/c/github/ipea/utilsIPEA/master.svg)](https://img.shields.io/codecov/c/github/ipea/utilsIPEA/master.svg) [![Rdoc](http://www.rdocumentation.org/badges/version/utilsIPEA)](http://www.rdocumentation.org/packages/utilsIPEA)
 
 This package has the most common functions used at IPEA.
 
